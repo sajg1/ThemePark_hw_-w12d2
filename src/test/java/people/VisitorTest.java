@@ -1,5 +1,7 @@
 package people;
 
+import attractions.Dodgems;
+import attractions.Park;
 import attractions.RollerCoaster;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,11 +12,15 @@ public class VisitorTest {
 
     Visitor visitor;
     RollerCoaster rollercoaster;
+    Dodgems dodgems;
+    Park park;
 
     @Before
     public void before(){
         visitor = new Visitor(14, 1.2, 40.0);
         rollercoaster = new RollerCoaster("Inferno", 9);
+        dodgems = new Dodgems("Pikey", 4);
+        park = new Park("Prairie", 9);
     }
 
     @Test
@@ -42,4 +48,14 @@ public class VisitorTest {
         visitor.addVisitedAttraction(rollercoaster);
         assertEquals(1, visitor.countVisitedAttractions());
     }
+
+    @Test
+    public void canAddMultipleAttractionsToVisitedAttractions() {
+        visitor.addVisitedAttraction(rollercoaster);
+        visitor.addVisitedAttraction(dodgems);
+        visitor.addVisitedAttraction(park);
+        assertEquals(3, visitor.countVisitedAttractions());
+    }
+
+    
 }
