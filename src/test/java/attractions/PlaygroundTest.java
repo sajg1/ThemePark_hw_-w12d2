@@ -42,5 +42,5 @@ public class PlaygroundTest {
     public void cannotAllowVisitorOver15() {
         assertEquals( false, playground.isAllowedTo(visitor2));
     }
-    
+
 }
