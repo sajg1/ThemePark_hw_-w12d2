@@ -5,8 +5,11 @@ import people.Visitor;
 
 public class RollerCoaster  extends Attraction implements ISecurity {
 
+    private double startingPrice;
+
     public RollerCoaster(String name, int rating) {
         super(name, rating);
+        this.startingPrice = 8.40;
     }
 
     public boolean isAllowedTo(Visitor visitor) {
