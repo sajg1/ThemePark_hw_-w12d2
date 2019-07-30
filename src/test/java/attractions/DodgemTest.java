@@ -44,4 +44,10 @@ public class DodgemTest {
     public void canChargeHalfPriceToChildrenUnder12() {
         assertEquals(2.25, dodgems.priceFor(visitor1), 0.01);
     }
+
+    @Test
+    public void canChargeNormalPriceToOver12 () {
+        assertEquals(4.50, dodgems.priceFor(visitor2), 0.01);
+    }
+    
 }
