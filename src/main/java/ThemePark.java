@@ -20,5 +20,9 @@ public class ThemePark {
         return this.allReviewed.size();
     }
 
+    public void addReview(IReviewed parkLocation) {
+        this.allReviewed.add(parkLocation);
+    }
+
 
 }
