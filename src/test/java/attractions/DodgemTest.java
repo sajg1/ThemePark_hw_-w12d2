@@ -49,5 +49,5 @@ public class DodgemTest {
     public void canChargeNormalPriceToOver12 () {
         assertEquals(4.50, dodgems.priceFor(visitor2), 0.01);
     }
-    
+
 }
