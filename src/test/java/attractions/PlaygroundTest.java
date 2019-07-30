@@ -36,6 +36,11 @@ public class PlaygroundTest {
     @Test
     public void canAllowAccessIf15OrUnder() {
         assertEquals(true, playground.isAllowedTo(visitor1));
-
     }
+
+    @Test
+    public void cannotAllowVisitorOver15() {
+        assertEquals( false, playground.isAllowedTo(visitor2));
+    }
+    
 }
