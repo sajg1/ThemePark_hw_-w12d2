@@ -57,5 +57,5 @@ public class VisitorTest {
         assertEquals(3, visitor.countVisitedAttractions());
     }
 
-    
+
 }
