@@ -29,4 +29,9 @@ public class DodgemTest {
     public void hasVisitCount() {
         assertEquals(0, dodgems.getVisitCount());
     }
+
+    @Test
+    public void hasStartingPrice() {
+        assertEquals(4.50, dodgems.getStartingPrice(), 0.01);
+    }
 }
