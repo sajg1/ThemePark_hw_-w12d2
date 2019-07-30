@@ -12,6 +12,10 @@ public class RollerCoaster  extends Attraction implements ISecurity {
         this.startingPrice = 8.40;
     }
 
+    public double getStartingPrice() {
+        return startingPrice;
+    }
+
     public boolean isAllowedTo(Visitor visitor) {
         if (visitor.getHeight() > 1.45 && visitor.getAge() > 12) {
             return true;
