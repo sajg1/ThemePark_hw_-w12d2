@@ -33,4 +33,8 @@ public class Visitor {
     public int countVisitedAttractions() {
         return this.visitedAttractions.size();
     }
+
+    public void addVisitedAttraction(Attraction attraction) {
+        this.visitedAttractions.add(attraction);
+    }
 }
