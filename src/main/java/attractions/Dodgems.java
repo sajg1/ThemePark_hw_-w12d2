@@ -1,6 +1,9 @@
 package attractions;
 
-public class Dodgems extends Attraction {
+import behaviours.ITicketed;
+import people.Visitor;
+
+public class Dodgems extends Attraction implements ITicketed {
 
     private double startingPrice;
 
@@ -9,7 +12,16 @@ public class Dodgems extends Attraction {
         this.startingPrice = 4.50;
     }
 
-    public double getStartingPrice() {
-        return startingPrice;
+    public double defaultPrice() {
+        return this.startingPrice;
+    }
+
+    public double priceFor(Visitor visitor) {
+        if (visitor.getAge() < 12) {
+            return this.startingPrice / 2;
+        } else {
+            return this.startingPrice;
+        }
+
     }
 }
