@@ -12,6 +12,7 @@ public class RollercoasterTest {
     Visitor visitor1;
     Visitor visitor2;
     Visitor visitor3;
+    Visitor visitor4;
 
     @Before
     public void setUp() {
@@ -19,6 +20,7 @@ public class RollercoasterTest {
         visitor1 = new Visitor(10,1.2, 10.00);
         visitor2 = new Visitor(18,2.2, 20.00);
         visitor3 = new Visitor(21,1.3, 40.00);
+        visitor4 = new Visitor(21,1.8, 40.00);
     }
 
     @Test
@@ -59,5 +61,10 @@ public class RollercoasterTest {
     @Test
     public void canChargeDoubleToTallPeople() {
         assertEquals(16.80, rollerCoaster.priceFor(visitor2),0.01);
+    }
+
+    @Test
+    public void canChargeDefaultPriceForOtherHeights() {
+        assertEquals( 8.40, rollerCoaster.priceFor(visitor4), 0.01);
     }
 }
