@@ -65,4 +65,12 @@ public class ThemeParkTest {
         assertEquals(1, dodgems.getVisitCount());
         assertEquals(1, park.getVisitCount());
     }
+
+    @Test
+    public void canHashMapAllReviews() {
+        themePark.addReview(rollercoaster);
+        themePark.addReview(iceCreamStall);
+        themePark.allReviewsMapped();
+        System.out.println(themePark.allReviewsMapped());
+    }
 }
